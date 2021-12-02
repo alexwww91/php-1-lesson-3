@@ -33,7 +33,7 @@ $menu = [
 		foreach ($menu as $keyMenu => $valueMenu) {?>
 			<li ><a href="<?php $valueMenu['url'] ?>"><?= $keyMenu ?></a>
 			<?php
-			if (is_array($valueMenu)) {?>
+			if ($valueMenu['subcat']) {?>
 				<ul class="submenu"><?php
 				foreach ($valueMenu['subcat'] as $key => $val) {
 					echo '<li ><a href="'.$val['url'].'">'.$key.'</a></li>';
